@@ -1,0 +1,29 @@
+.wrapper() {
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #707070;
+  font-size: 11px;
+  @media (max-width: 849px) {
+    font-size: 10px;
+  }
+}
+
+.wrapper_y {
+  .wrapper;
+  left: -28px;
+  top: 10px;
+  @media (max-width: 849px) {
+    left: -22px;
+    top: 5px;
+  }
+}
+
+.wrapper_x {
+  .wrapper;
+  top: -20px;
+  @media (max-width: 849px) {
+    top: -15px;
+  }
+}

@@ -1,0 +1,37 @@
+.wrapper {
+  height: 20px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.number {
+  color: #0080FF;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.divider {
+  width: 5px;
+}
+
+.scroll-icon {
+  position: absolute;
+  font-size: 25px;
+  display: none;
+  @media (max-width: 650px) {
+    display: inline-block;
+  }
+}
+
+.scroll-icon_left {
+  left: -30px;
+}
+
+.scroll-icon_right {
+  right: -30px;
+}

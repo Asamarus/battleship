@@ -1,0 +1,57 @@
+{
+	"name": "battleship",
+	"private": true,
+	"version": "1.0.0",
+	"author": "Demax",
+	"scripts": {
+		"dev": "cross-env isAdmin=yes platform=web_server webpack --progress --colors --watch --env.platform web_server",
+		"prod": "cross-env NODE_ENV=production isAdmin=yes platform=web_server webpack --progress --colors --env.platform web_server",
+		"start": "cross-env isAdmin=yes platform=node webpack-dev-server --env.platform node",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"moduleRoots": [
+		"app"
+	],
+	"dependencies": {
+		"babel-polyfill": "^6.26.0",
+		"dot-prop-immutable": "^2.1.0",
+		"jquery": "^3.4.1",
+		"localforage": "^1.7.3",
+		"lodash": "^4.17.15",
+		"prop-types": "^15.7.2",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-redux": "^7.1.3",
+		"redux": "^4.0.5",
+		"redux-thunk": "^2.3.0",
+		"shortid": "^2.2.15"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.8.4",
+		"@babel/plugin-proposal-class-properties": "^7.8.3",
+		"@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+		"@babel/plugin-transform-destructuring": "^7.8.3",
+		"@babel/plugin-transform-flow-strip-types": "^7.8.3",
+		"@babel/plugin-transform-react-display-name": "^7.8.3",
+		"@babel/preset-env": "^7.8.4",
+		"@babel/preset-react": "^7.8.3",
+		"autoprefixer": "^9.7.4",
+		"babel-loader": "^8.0.6",
+		"babel-plugin-module-resolver": "^4.0.0",
+		"cross-env": "^7.0.0",
+		"css-loader": "^3.4.2",
+		"cssnano": "^4.1.11",
+		"less": "^3.10.3",
+		"less-loader": "^5.0.0",
+		"mini-css-extract-plugin": "^0.9.0",
+		"postcss-loader": "^3.0.0",
+		"style-loader": "^1.1.3",
+		"stylelint": "^13.0.0",
+		"stylelint-webpack-plugin": "^1.2.1",
+		"terser-webpack-plugin": "^2.3.4",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10",
+		"webpack-conditional-loader": "^1.0.12",
+		"webpack-dev-server": "^3.10.2"
+	}
+}

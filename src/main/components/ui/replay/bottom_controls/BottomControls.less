@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  height: 50px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  z-index: 999;
+  background: #fff;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.range-wrapper {
+  flex: 1 1 0;
+  //desktop
+  @media (min-width: 1024px) {
+    min-width: 400px;
+  }
+  //tablet
+  @media (min-width: 481px) and (max-width: 1023px) {
+    min-width: 300px;
+  }
+  //mobile
+  @media (max-width: 480px) {
+    min-width: 200px;
+  }
+}
+
+.range {
+  width: 100%;
+}
+
+.icon-wrapper {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.icon-wrapper_disabled {
+  cursor: not-allowed;
+
+  .icon {
+    color: #ccc;
+  }
+}
+
+.icon {
+  font-size: 25px;
+  color: #000;
+}

@@ -1,0 +1,108 @@
+@import "@{colors}";
+@size: 20px;
+
+.wrapper {
+  cursor: pointer;
+  display: flex;
+  height: @size;
+  align-items: center;
+  user-select: none;
+}
+
+.wrapper_disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.track {
+  outline: 0;
+  position: relative;
+  width: 40px;
+  height: 14px;
+  border-radius: 10px;
+  display: flex;
+  background-color: lightgray;
+  transition: background-color 200ms ease-in-out;
+}
+
+.track_focused {
+  box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+}
+
+.thumb {
+  position: absolute;
+  left: 0;
+  height: @size;
+  width: @size;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  align-self: center;
+  background-color: white;
+  z-index: 2;
+  transition: all 200ms ease-in-out;
+}
+
+.label {
+  margin-left: 10px;
+  user-select: none;
+}
+
+.thumb_active {
+  left: calc(100% - @size);
+}
+
+.thumb_main_active {
+  background-color: @main;
+}
+
+.track_main_active {
+  background-color: fade(@main,30%);
+}
+
+.thumb_primary_active {
+  background-color: @primary;
+}
+
+.track_primary_active {
+  background-color: fade(@primary,30%);
+}
+
+.thumb_success_active {
+  background-color: @success;
+}
+
+.track_success_active {
+  background-color: fade(@success,30%);
+}
+
+.thumb_info_active {
+  background-color: @info;
+}
+
+.track_info_active {
+  background-color: fade(@info,30%);
+}
+
+.thumb_warning_active {
+  background-color: @warning;
+}
+
+.track_warning_active {
+  background-color: fade(@warning,30%);
+}
+
+.thumb_danger_active {
+  background-color: @danger;
+}
+
+.track_danger_active {
+  background-color: fade(@danger,30%);
+}
+
+.thumb_custom_active {
+  background-color: @custom;
+}
+
+.track_custom_active {
+  background-color: fade(@custom,30%);
+}

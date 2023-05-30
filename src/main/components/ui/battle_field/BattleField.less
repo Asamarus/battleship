@@ -1,0 +1,40 @@
+.wrapper {
+  height: 359px;
+  width: 331px;
+  position: relative;
+  flex-shrink: 0;
+  @media (max-width: 849px) {
+    height: 289px;
+    width: 261px;
+  }
+}
+
+.table {
+  margin: 0;
+  border-collapse: collapse;
+  cursor: default;
+  display: inline-block;
+  position: relative;
+}
+
+.cell {
+  border: 1px solid #b4b4ff;
+  padding: 0;
+}
+
+.scroll-icon {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  @media (max-width: 650px) {
+    display: block;
+  }
+}
+
+.scroll-icon {
+  font-size: 25px;
+}

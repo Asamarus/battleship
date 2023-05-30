@@ -1,0 +1,26 @@
+@import "@{colors}";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.lang {
+  width: 40px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+.lang + .lang {
+  margin-left: 20px;
+}
+
+.lang_active {
+  border: 3px solid @main;
+}
+
+.lang_clickable {
+  cursor: pointer;
+}

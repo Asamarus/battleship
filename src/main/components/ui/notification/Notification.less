@@ -1,0 +1,42 @@
+.wrapper {
+  width: 400px;
+  //mobile
+  @media (max-width: 480px) {
+    width: 250px;
+  }
+  position: absolute;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  transition: transform 1s;
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: center;
+  background: #000;
+  border-radius: 3px;
+}
+
+.wrapper_mounted {
+  transform: translate(-50%, 0px);
+}
+
+.icon-wrapper {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  img {
+    width: 40px;
+  }
+}
+
+.text-wrapper {
+  padding-left: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}

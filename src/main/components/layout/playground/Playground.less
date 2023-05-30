@@ -1,0 +1,56 @@
+.wrapper {
+  padding: 70px 20px 20px;
+  height: 100%;
+  user-select: none;
+}
+
+.battle-fields {
+  overflow-x: auto;
+  padding: 20px 0;
+  display: flex;
+  width: 100%;
+  @media (min-width: 653px) {
+    justify-content: center;
+  }
+}
+
+.battle-fields_inner {
+  width: 802px;
+  flex-shrink: 0;
+  display: flex;
+  @media (max-width: 849px) {
+    width: 612px;
+  }
+}
+
+.battle-fields_margin {
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.battle-fields_divider {
+  flex-shrink: 0;
+  width: 100px;
+  @media (max-width: 849px) {
+    width: 50px;
+  }
+}
+
+.extra-ui {
+  padding: 20px 0;
+  display: flex;
+  width: 100%;
+  @media (max-width: 849px) {
+    display: none;
+  }
+  @media (min-width: 653px) {
+    justify-content: center;
+  }
+}
+
+.field-placeholder {
+  width: 331px;
+  @media (max-width: 849px) {
+    width: 261px;
+  }
+}

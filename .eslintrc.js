@@ -1,0 +1,47 @@
+module.exports = {
+	parser: 'babel-eslint',
+	env: {
+		browser: true,
+		es6: true,
+		node: true,
+	},
+	extends: ['eslint:recommended', 'plugin:react/recommended'],
+	parserOptions: {
+		ecmaFeatures: {
+			experimentalObjectRestSpread: true,
+			jsx: true,
+		},
+		sourceType: 'module',
+	},
+	plugins: ['react', 'react-hooks'],
+	rules: {
+		'no-console': ['error', { allow: ['warn', 'error'] }],
+		'no-useless-escape': 0,
+		'no-unused-vars': [
+			'error',
+			{ varsIgnorePattern: 'PropTypes', argsIgnorePattern: 'ownProps' },
+		],
+		indent: ['error', 'tab', { SwitchCase: 1 }],
+		'no-class-assign': 'off',
+		// 'linebreak-style': ['error', 'unix'],
+		quotes: ['error', 'single'],
+		semi: ['error', 'always'],
+		'react/display-name': 0,
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'warn',
+	},
+	globals: {
+		_: false,
+		_g: false,
+		_h: false,
+		$: false,
+		ee: false,
+		events: false,
+		uiStore: false,
+		browser_window: false,
+		navigation: false,
+		navigation_history: false,
+		store: false,
+		module: false,
+	},
+};

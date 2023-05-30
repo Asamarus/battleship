@@ -1,0 +1,57 @@
+@import "@{colors}";
+@optionHeight: 17px;
+@optionWidth: 17px;
+@circleHeight: 7px;
+@circleWidth: 7px;
+@borderWidth: 1px;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: @borderWidth solid #ddd;
+  width: @optionWidth;
+  height: @optionHeight;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.circle {
+  width: @circleWidth;
+  height: @circleHeight;
+  border-radius: 50%;
+}
+/* ========================================================================*
+*
+*                       Themes
+*
+* ========================================================================*/
+
+.circle_main {
+  background-color: @main;
+}
+
+.circle_primary {
+  background-color: @primary;
+}
+
+.circle_success {
+  background-color: @success;
+}
+
+.circle_info {
+  background-color: @info;
+}
+
+.circle_warning {
+  background-color: @warning;
+}
+
+.circle_danger {
+  background-color: @danger;
+}
+
+.circle_custom {
+  background-color: @custom;
+}

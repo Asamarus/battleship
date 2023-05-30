@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.ship {
+  border: 1px solid #00f;
+  background: #0000ff0d;
+  display: flex;
+}
+
+.ship_is-dead {
+  .cell {
+    background: url("/img/misc/cross.png") center center no-repeat;
+  }
+}
+
+.cell {
+  width: 22px;
+  height: 22px;
+
+  &:not(:last-child) {
+    border-right: 1px solid #c9c9c9;
+  }
+}

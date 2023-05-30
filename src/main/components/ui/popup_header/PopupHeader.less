@@ -1,0 +1,73 @@
+@import "@{colors}";
+
+.wrapper {
+  height: 50px;
+  display: flex;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  user-select: none;
+}
+
+.title-wrapper {
+  flex-grow: 1;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.close-wrapper {
+  width: 50px;
+  cursor: pointer;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+/* ========================================================================*
+*
+*                       Themes
+*
+* ========================================================================*/
+.wrapper_main {
+  background-color: @main;
+}
+
+.wrapper_primary {
+  background-color: @primary;
+}
+
+.wrapper_success {
+  background-color: @success;
+}
+
+.wrapper_info {
+  background-color: @info;
+}
+
+.wrapper_warning {
+  background-color: @warning;
+}
+
+.wrapper_danger {
+  background-color: @danger;
+}
+
+.wrapper_custom {
+  background-color: @custom;
+}

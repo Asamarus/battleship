@@ -1,0 +1,121 @@
+.wrapper {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background: #fff;
+  @media (max-width: 849px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.wrapper_gray {
+  background: #dedede !important;
+}
+
+.wrapper_radar_ship {
+  background: #00f !important;
+}
+
+.wrapper_highlight {
+  animation-name: highlight;
+  animation-duration: 3s;
+}
+@keyframes highlight {
+  0% {
+    background-color: rgba(255,0,0,0.8);
+  }
+
+  100% {
+    background-color: rgba(255,0,0,0);
+  }
+}
+
+.wrapper_clickable {
+  cursor: pointer;
+
+  &:hover {
+    .highlight {
+      display: block;
+    }
+  }
+}
+
+.highlight {
+  pointer-events: none;
+  display: none;
+  position: absolute;
+  border: 2px solid #40bf44;
+  width: 32px;
+  height: 32px;
+  z-index: 5;
+  background: #40bf440d;
+  @media (max-width: 849px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.action() {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  @media (max-width: 849px) {
+    width: 25px;
+    height: 25px;
+  }
+  z-index: 4;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.missed {
+  background-image: url("/img/field/missed.png");
+  .action;
+}
+
+.fire {
+  background-image: url("/img/field/fire.gif");
+  .action;
+}
+
+.radar {
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: calc(32px * 3);
+  height: calc(32px * 3);
+  @media (max-width: 849px) {
+    width: calc(25px * 3);
+    height: calc(25px * 3);
+  }
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px hsla(145, 50%, 40%, 1), inset 0 0 0 1px hsla(145, 50%, 40%, 1);
+  opacity: 0.5;
+}
+
+.radar_sweep {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: solid 1px hsla(145, 50%, 40%, .3);
+  width: calc((32px * 3) / 2);
+  height: calc((32px * 3) / 2);
+  @media (max-width: 849px) {
+    width: calc((25px * 3) / 2);
+    height: calc((25px * 3) / 2);
+  }
+  border-radius: 100% 0 0 0;
+  transform-origin: 100% 100%;
+  background: linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, hsla(145, 50%, 40%, 1));
+  animation: sweep 2s infinite linear;
+}
+@keyframes sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
