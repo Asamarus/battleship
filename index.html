@@ -2,14 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battleship</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="theme-color" content="#2196F3">
+
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/dist/main.css">
+  <link rel="manifest" href="/manifest.json">
+
+  <title>Battleship</title>
 </head>
 
 <body>
 
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <script>
+    window.__PRELOADED_STATE__ = {};
+  </script>
+
+  <div id="app"></div>
+
+  <script src="/dist/main.js" defer data-id="main"></script>
+
+  <script>
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+
+  </script>
 </body>
 
 </html>
