@@ -2,7 +2,7 @@
 
 
 Classic battleship game with different bonuses and penalties.  
-Made for fun. Coding by [Asamarus](https://github.com/asamarus). Icons design by [enoraso](https://github.com/enoraso)  
+Made for fun. Coding by [Asamarus](https://github.com/asamarus). Icons design by [enoraso](https://github.com/enoraso).  
 Bonuses and penalties can be turned on/off in game settings.
 
 [Live demo](https://asamarus.github.io/battleship)
